@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import test.PaymentSystem.enums.PaymentSystemInputs;
 
 public class PaymentSystemPage {
     WebDriver driver;
@@ -16,7 +17,7 @@ public class PaymentSystemPage {
         driver.get("http://localhost:8080/Fund_Software_Test_Cucumber_Website_war_exploded/");
     }
 
-    public void inputName(String value){
+ /*   public void inputName(String value){
 
         WebElement item = driver.findElement(By.name("name"));
         item.sendKeys(value);
@@ -57,7 +58,7 @@ public class PaymentSystemPage {
         Select dropdown= new Select(mySelectElement);
         dropdown.selectByVisibleText(value);
     }
-
+*/
     public void submitClick(){
 
         WebElement item = driver.findElement(By.id("submit"));
@@ -71,49 +72,98 @@ public class PaymentSystemPage {
         item.click();
     }
 
+    public void inputValue(PaymentSystemInputs input, String value){
 
+        if(input.equals(PaymentSystemInputs.CARD_TYPE)){
+            WebElement mySelectElement = driver.findElement(By.id(input.toString().toLowerCase()));
+            Select dropdown= new Select(mySelectElement);
+            dropdown.selectByVisibleText(value);
+        } else{
+            WebElement item = driver.findElement(By.id(input.toString().toLowerCase()));
+            item.sendKeys(value);
+        }
+    }
 
+    public String getValue(PaymentSystemInputs input, boolean validationMessage){
 
-
-    public String getName(){
-
-        WebElement item = driver.findElement(By.name("name"));
-
-        String errorMessage = item.getAttribute("required");
-        if(errorMessage.contains("Please fill out this field")){
-            return errorMessage;
+        if(input.equals(PaymentSystemInputs.CARD_TYPE)){
+            WebElement mySelectElement = driver.findElement(By.id(input.toString().toLowerCase()));
+            Select dropdown= new Select(mySelectElement);
+            return dropdown.getFirstSelectedOption().getText();
         }
 
-        return item.getAttribute("value");
+        WebElement item = driver.findElement(By.id(input.toString().toLowerCase()));
+
+        if (input.equals(PaymentSystemInputs.CARD_NUMBER) && !validationMessage){
+         return item.getAttribute("value").replace(" ", "");
+
+        }
+
+        if(!validationMessage)
+            return item.getAttribute("value");
+        else
+            return item.getAttribute("validationMessage");
+    }
+
+/*
+    public String getName(boolean getValue){
+
+        WebElement item = driver.findElement(By.name("name"));
+        if(getValue)
+            return item.getAttribute("value");
+        else
+            return item.getAttribute("validationMessage");
+
+
     }
 
     public String getAddress(){
 
         WebElement item = driver.findElement(By.name("address"));
+        String errorMessage = item.getAttribute("validationMessage");
+        if(errorMessage.contains("Please fill in this field")){
+            return errorMessage;
+        }
         return item.getAttribute("value");
     }
 
     public String getCardNumber(){
 
         WebElement item = driver.findElement(By.name("cardNumber"));
+        String errorMessage = item.getAttribute("validationMessage");
+        if(errorMessage.contains("Please fill in this field")){
+            return errorMessage;
+        }
         return item.getAttribute("value");
     }
 
     public String getExpiryDate(){
 
         WebElement item = driver.findElement(By.name("expiryDate"));
+        String errorMessage = item.getAttribute("validationMessage");
+        if(errorMessage.contains("Please fill in this field")){
+            return errorMessage;
+        }
         return item.getAttribute("value");
     }
 
     public String getCVV(){
 
         WebElement item = driver.findElement(By.name("cvvCode"));
+        String errorMessage = item.getAttribute("validationMessage");
+        if(errorMessage.contains("Please fill in this field")){
+            return errorMessage;
+        }
         return item.getAttribute("value");
     }
 
     public String  getAmount(){
 
         WebElement item = driver.findElement(By.name("amount"));
+        String errorMessage = item.getAttribute("validationMessage");
+        if(errorMessage.contains("Please fill in this field")){
+            return errorMessage;
+        }
         return item.getAttribute("value");
     }
 
@@ -123,4 +173,6 @@ public class PaymentSystemPage {
         Select dropdown= new Select(mySelectElement);
         return dropdown.getFirstSelectedOption().getText();
     }
+*/
+
 }
