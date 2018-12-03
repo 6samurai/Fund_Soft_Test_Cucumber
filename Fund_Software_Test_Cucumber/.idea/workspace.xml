@@ -2,7 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java" />
-    <bookmark url="file://$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java" line="119" />
+    <bookmark url="file://$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java" line="127" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b86caa41-39f1-4f88-ae37-65ddfbd23f81" name="Default" comment="">
@@ -10,9 +10,6 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/test/PaymentSystem/PaymentSystemPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/PaymentSystem/PaymentSystemPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/paymentSystem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/paymentSystem.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/paymentSystem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/paymentSystem.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/PaymentSystem/PaymentSystemPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/PaymentSystem/PaymentSystemPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/PaymentSystemStepDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/PaymentSystemStepDefs.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-104">
-              <caret line="126" column="69" selection-start-line="126" selection-start-column="69" selection-end-line="126" selection-end-column="69" />
+            <state relative-caret-position="810">
+              <caret line="119" column="26" lean-forward="true" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,26 +48,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/PaymentSystem/enums/PaymentSystemInputs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/paymentSystem.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+            <state relative-caret-position="34">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/paymentSystem.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/PaymentSystem/PaymentSystemPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="97" column="15" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
+            <state relative-caret-position="748">
+              <caret line="108" column="33" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,10 +102,10 @@
         <option value="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/GoogleStepDefs.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/google.feature" />
         <option value="$PROJECT_DIR$/src/test/java/test/system/google/GoogleTests.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/paymentSystem.feature" />
         <option value="$PROJECT_DIR$/src/test/java/test/PaymentSystem/enums/PaymentSystemInputs.java" />
-        <option value="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/PaymentSystem/PaymentSystemPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/paymentSystem.feature" />
       </list>
     </option>
   </component>
@@ -133,7 +130,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,15 +217,6 @@
               <item name="Fund_Software_Test_Cucumber" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="google" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fund_Software_Test_Cucumber" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fund_Software_Test_Cucumber" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -249,13 +236,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543582019540" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543852398998" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -436,17 +424,13 @@
       <workItem from="1543480816341" duration="822000" />
       <workItem from="1543482210713" duration="3174000" />
       <workItem from="1543486502299" duration="15988000" />
-      <workItem from="1543569803866" duration="6958000" />
+      <workItem from="1543569803866" duration="8788000" />
+      <workItem from="1543602140645" duration="598000" />
+      <workItem from="1543845104246" duration="3225000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Scenario__Reset_form - 2018.11.30 at 13h 26m 57s.xml">
-      <configuration name="Scenario: Reset form" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Feature__paymentSystem - 2018.11.30 at 13h 28m 22s.xml">
-      <configuration name="Feature: paymentSystem" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
     <history-entry file="Feature__paymentSystem - 2018.11.30 at 13h 30m 35s.xml">
       <configuration name="Feature: paymentSystem" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
@@ -471,9 +455,15 @@
     <history-entry file="Feature__paymentSystem - 2018.11.30 at 13h 40m 55s.xml">
       <configuration name="Feature: paymentSystem" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
+    <history-entry file="Feature__paymentSystem - 2018.11.30 at 13h 46m 53s.xml">
+      <configuration name="Feature: paymentSystem" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Feature__paymentSystem - 2018.12.03 at 16h 15m 40s.xml">
+      <configuration name="Feature: paymentSystem" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37867000" />
+    <option name="totallyTimeSpent" value="43520000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -488,7 +478,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23560767" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24093817" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -496,8 +486,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29144096" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29144096" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -534,25 +524,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java</url>
-          <line>114</line>
+          <line>122</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/test/PaymentSystem/PaymentSystemPage.java</url>
-          <line>114</line>
+          <line>124</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java</url>
-          <line>106</line>
+          <line>114</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java</url>
-          <line>58</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -872,10 +862,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/PaymentSystem/enums/PaymentSystemInputs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/PaymentSystem/PaymentSystemPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="108" column="33" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/PaymentSystemStepDefs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="126" column="69" selection-start-line="126" selection-start-column="69" selection-end-line="126" selection-end-column="69" />
+        <state relative-caret-position="810">
+          <caret line="119" column="26" lean-forward="true" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -884,25 +891,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/paymentSystem.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/PaymentSystem/enums/PaymentSystemInputs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/PaymentSystem/PaymentSystemPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="97" column="15" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="561">
+          <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
         </state>
       </provider>
     </entry>

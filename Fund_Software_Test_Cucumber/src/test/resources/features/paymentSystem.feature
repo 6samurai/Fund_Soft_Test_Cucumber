@@ -19,6 +19,23 @@ Feature: Payment system verification
       |Name       |
       |Address    |
       |CardNumber |
-      |ExpiryDate    |
+      |ExpiryDate |
       |CVVCode    |
       |Amount     |
+
+
+  Scenario:  Valid process
+    Given I am a user trying to process a payment
+    When I submit correct details
+    Then I should be told that the payment was successful
+
+  Scenario Outline: Valid transactions with different card types
+    Given I am a user trying to process a payment
+    When I submit correct details using a "<card-type>" card
+    Then I should be told that the payment was successful
+
+    Examples:
+      | card-type |
+      |Mastercard |
+      |VISA       |
+      |American Express |

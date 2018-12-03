@@ -1,5 +1,6 @@
 package test.PaymentSystem;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -103,6 +104,15 @@ public class PaymentSystemPage {
             return item.getAttribute("value");
         else
             return item.getAttribute("validationMessage");
+    }
+
+    public String getPopUpMessage(){
+        Alert alert = driver.switchTo().alert();
+
+        // Capturing alert message.
+        String alertMessage= driver.switchTo().alert().getText();
+        alert.accept();
+        return  alertMessage;
     }
 
 /*

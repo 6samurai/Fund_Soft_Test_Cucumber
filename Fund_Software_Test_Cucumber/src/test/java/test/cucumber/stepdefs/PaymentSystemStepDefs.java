@@ -46,6 +46,14 @@ public class PaymentSystemStepDefs {
     }
 
 
+
+    @When("I submit correct details")
+    public void iSubmitCorrectDetails() {
+        iFillInTheForm();
+        paymentPage.submitClick();
+    }
+
+
     @And("^click on the clear button$")
     public void clickOnTheClearButton() {
         PaymentSystemPage paymentPage = new PaymentSystemPage(driver);
@@ -109,7 +117,7 @@ public class PaymentSystemStepDefs {
 
 
     @Then("I should be told that \"([^\"]*)\" is required")
-    public void I_should_be_told_that_is_required(String field) {
+    public void iShouldBeToldThatIsRequired(String field) {
 
         if (field.contains("Name"))
             assertEquals("Please enter name", paymentPage.getValue(PaymentSystemInputs.NAME,true));
@@ -140,6 +148,24 @@ public class PaymentSystemStepDefs {
             assertEquals("Please enter amount", paymentPage.getValue(PaymentSystemInputs.AMOUNT,true));
         else
             assertEquals(validDetails.get(6),  paymentPage.getValue(PaymentSystemInputs.AMOUNT,false));
+
+    }
+
+    @Then("I should be told that the payment was successful")
+    public void iShouldBeToldThatThePaymentWasSuccessful() {
+        assertEquals("Transaction was successful", paymentPage.getPopUpMessage());
+
+    }
+
+    @When("I submit correct details using a \"([^\"]*)\" card")
+    public void iSubmitCorrectDetailsUsingCard(String field) {
+        if(field.contains("VISA")){
+
+
+        }else if (field.contains("Mastercard")){
+
+
+        }else if(field.contains("American Express"))
 
     }
 
