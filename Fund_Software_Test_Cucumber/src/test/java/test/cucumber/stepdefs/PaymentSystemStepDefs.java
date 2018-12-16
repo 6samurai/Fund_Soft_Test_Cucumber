@@ -1,13 +1,10 @@
 package test.cucumber.stepdefs;
-
-import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
+import cucumber.api.java.en.When;;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import test.PaymentSystem.PaymentSystemPage;
@@ -153,23 +150,30 @@ public class PaymentSystemStepDefs {
 
     @Then("I should be told that the payment was successful")
     public void iShouldBeToldThatThePaymentWasSuccessful() {
-        assertEquals("Transaction was successful", paymentPage.getPopUpMessage());
-
+        assertEquals("The payment was successful", paymentPage.getPopUpMessage());
     }
 
     @When("I submit correct details using a \"([^\"]*)\" card")
     public void iSubmitCorrectDetailsUsingCard(String field) {
-        if(field.contains("VISA")){
 
-
-        }else if (field.contains("Mastercard")){
-
-
-        }else if(field.contains("American Express"))
+        validDetailsDiffCards(field);
+        iFillInTheForm();
+        paymentPage.submitClick();
 
     }
 
+    @When("I submit a form with any invalid that which the processing system rejects")
+    public void iSubmitAFormWithAnyInvalidThatWhichTheProcessingSystemRejects() {
+        invalidForm();
+        iFillInTheForm();
 
+        paymentPage.submitClick();
+    }
+
+    @Then("I should be told that there was an error processing my transaction")
+    public void iShouldBeToldThatThereWasAnErrorProcessingMyTransaction() {
+        assertEquals("Invalid Card Number", paymentPage.getPopUpMessage());
+    }
     @Before
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "C:/Users/Owner/Desktop/GitHub Projects/Fund_Software_Test_Cucumber_Git/Fund_Soft_Test_Cucumber/Fund_Software_Test_Cucumber/chromedriver.exe");
@@ -179,8 +183,7 @@ public class PaymentSystemStepDefs {
         validDetails.add("Test user");
         validDetails.add("111, test address, TST101");
         validDetails.add("VISA");
-        //TO CHECK IF THIS IS A VALID CARD NUMBER
-        validDetails.add("411111111111111");
+        validDetails.add("4111111111111111");
         validDetails.add("05/2020");
         validDetails.add("111");
         validDetails.add("1000");
@@ -192,5 +195,41 @@ public class PaymentSystemStepDefs {
     }
 
 
+    private void validDetailsDiffCards(String card){
+        if(card.contains("American Express")){
+            validDetails.clear();
+            validDetails.add("Test user American");
+            validDetails.add("222, test address, TST101");
+            validDetails.add("American Express");
+            validDetails.add("378282246310005");
+            validDetails.add("05/2020");
+            validDetails.add("1111");
+            validDetails.add("1000");
+
+        } else if( card.contains("Mastercard")){
+            validDetails.clear();
+            validDetails.add("Test user");
+            validDetails.add("333, test address, TST101");
+            validDetails.add("Mastercard");
+            validDetails.add("5555555555554444");
+            validDetails.add("05/2020");
+            validDetails.add("111");
+            validDetails.add("100");
+        }
+    }
+
+    private void invalidForm(){
+        validDetails.clear();
+        validDetails.add("Test user");
+        validDetails.add("333, test address, TST101");
+        validDetails.add("Mastercard");
+        validDetails.add("6555555555554444");
+        validDetails.add("05/2020");
+        validDetails.add("111");
+        validDetails.add("100");
+    }
+    private void validTransactionPopUpCheck(){
+        assertEquals("The payment was successful", paymentPage.getPopUpMessage());
+    }
 
 }

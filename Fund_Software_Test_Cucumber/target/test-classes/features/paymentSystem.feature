@@ -1,15 +1,13 @@
 Feature: Payment system verification
 
-  I want to fill in a form and reset
+ Form operations
 
-  Scenario:  Reset form
+  Scenario: 1 - Valid process
     Given I am a user trying to process a payment
-    When I fill in the form
-    And click on the clear button
-    Then the form data should be cleared
+    When I submit correct details
+    Then I should be told that the payment was successful
 
-
-  Scenario Outline: Missing information
+  Scenario Outline: 2 - Missing information
       Given I am a user trying to process a payment
       When I submit a form with all data except "<fieldname>"
       Then I should be told that "<fieldname>" is required
@@ -24,7 +22,27 @@ Feature: Payment system verification
       |Amount     |
 
 
-  Scenario:  Valid process
+  Scenario: 3 - Invalid data
     Given I am a user trying to process a payment
-    When I submit correct details
+    When I submit a form with any invalid that which the processing system rejects
+    Then I should be told that there was an error processing my transaction
+
+  Scenario Outline: 4 - Valid transactions with different card types
+    Given I am a user trying to process a payment
+    When I submit correct details using a "<card-type>" card
     Then I should be told that the payment was successful
+
+    Examples:
+      | card-type |
+      |Mastercard |
+      |VISA |
+      |American Express |
+
+  Scenario: 5 - Reset form
+    Given I am a user trying to process a payment
+    When I fill in the form
+    And click on the clear button
+    Then the form data should be cleared
+
+
+
