@@ -1,6 +1,6 @@
 Feature: Payment system verification
 
- Form operations
+  Form operations
 
   Scenario: 1 - Valid process
     Given I am a user trying to process a payment
@@ -8,19 +8,18 @@ Feature: Payment system verification
     Then I should be told that the payment was successful
 
   Scenario Outline: 2 - Missing information
-      Given I am a user trying to process a payment
-      When I submit a form with all data except "<fieldname>"
-      Then I should be told that "<fieldname>" is required
+    Given I am a user trying to process a payment
+    When I submit a form with all data except "<fieldname>"
+    Then I should be told that "<fieldname>" is required
 
-      Examples:
-      | fieldname |
-      |Name       |
-      |Address    |
-      |CardNumber |
-      |ExpiryDate |
-      |CVVCode    |
-      |Amount     |
-
+    Examples:
+      | fieldname  |
+      | Name       |
+      | Address    |
+      | CardNumber |
+      | ExpiryDate |
+      | CVVCode    |
+      | Amount     |
 
   Scenario: 3 - Invalid data
     Given I am a user trying to process a payment
@@ -33,10 +32,10 @@ Feature: Payment system verification
     Then I should be told that the payment was successful
 
     Examples:
-      | card-type |
-      |Mastercard |
-      |VISA |
-      |American Express |
+      | card-type        |
+      | Mastercard       |
+      | VISA             |
+      | American Express |
 
   Scenario: 5 - Reset form
     Given I am a user trying to process a payment
