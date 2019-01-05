@@ -1,6 +1,6 @@
 Feature: Payment system verification
 
-  Form operations
+This feature contains multiple scenarios to be implemented on the Payment System
 
   Scenario: 1 - Valid process
     Given I am a user trying to process a payment
